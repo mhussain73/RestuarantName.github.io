@@ -3373,6 +3373,11 @@ input, select, textarea {
   	    #intro .carousel .img-container img.active {
   	    display: block;            
   	    }
+
+  	    #intro .carousel .img-container img.inactive {
+  	    display: none;            
+		}
+
 /*
   	    #intro .carousel .arrow {
   	    background: none;
@@ -5116,6 +5121,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
