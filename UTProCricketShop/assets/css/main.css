@@ -3373,13 +3373,43 @@ input, select, textarea {
   	    #intro .carousel .img-container img.active {
   	    display: block;            
   	    }
-
+/*
   	    #intro .carousel .arrow {
   	    background: none;
   	    border: none;
    	    font-size: 10px;
   	    cursor: pointer;
   	    user-select: none;
+  	    }*/
+
+
+/* Arrows positioned over the left/right edges */
+  	    #intro .carousel .img-container .arrow {
+    	position: absolute;
+  	    top: 50%;                  /* Center vertically */
+  	    transform: translateY(-50%);
+    	background: rgba(0,0,0,0.4); /* Semi-transparent background */
+    	border: none;
+    	color: #fff;
+  	    font-size: 15px;
+  	    padding: 5px;
+  	    cursor: pointer;
+   	    border-radius: 50%;
+  	    user-select: none;
+  	    transition: background 0.3s;
+  	    }
+
+  	    .carousel .img-container .arrow.left {
+  	    left: 5px;
+  	    }
+
+  	    .carousel .img-container .arrow.right {
+    	right: 5px;
+  	    }
+
+  	    /* Hover effect for arrows */
+  	    .carousel .img-container .arrow:hover {
+  	    background: rgba(0,0,0,0.7);
   	    }
 
 /*
@@ -5086,6 +5116,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
