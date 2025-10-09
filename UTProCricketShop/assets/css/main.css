@@ -3342,11 +3342,11 @@ input, select, textarea {
   	    }
 
   	    #intro .carousel .img-container {
-    	/*width: fit-content;*/
-		display: inline-block;
+    	width: fit-content;
+		/*display: inline-block;*/
    	    aspect-ratio: 1 / 1;     
-    	/*position: relative;*/
-		margin: 0 auto 20px;
+    	position: relative;
+		/*margin: 0 auto 20px;*/
    	    overflow: hidden;
     	border-radius: 12px;
    	    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -5078,6 +5078,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
