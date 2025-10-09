@@ -3399,16 +3399,16 @@ input, select, textarea {
   	    transition: background 0.3s;
   	    }
 
-  	    .carousel .img-container .arrow.left {
+  	    #intro .carousel .img-container .arrow.left {
   	    left: 5px;
   	    }
 
-  	    .carousel .img-container .arrow.right {
+  	    #intro .carousel .img-container .arrow.right {
     	right: 5px;
   	    }
 
   	    /* Hover effect for arrows */
-  	    .carousel .img-container .arrow:hover {
+  	    #intro .carousel .img-container .arrow:hover {
   	    background: rgba(0,0,0,0.7);
   	    }
 
@@ -5116,6 +5116,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
