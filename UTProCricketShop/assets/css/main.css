@@ -3337,8 +3337,8 @@ input, select, textarea {
   	    #intro .carousel {
     	display: inline-flex;
     	align-items: center;
-   	    gap: 10px;
-   	    margin-bottom: 20px;
+   	    gap: 5px;
+   	    margin-bottom: 10px;
   	    }
 
   	    #intro .carousel .img-container {
@@ -3377,7 +3377,7 @@ input, select, textarea {
   	    #intro .carousel .arrow {
   	    background: none;
   	    border: none;
-   	    font-size: 24px;
+   	    font-size: 10px;
   	    cursor: pointer;
   	    user-select: none;
   	    }
@@ -5086,6 +5086,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
