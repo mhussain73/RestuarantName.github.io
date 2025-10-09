@@ -3526,7 +3526,7 @@ input, select, textarea {
 		}
 
 /* Header */
-
+/*
     @-moz-keyframes reveal-header {
 		0% {
 			top: -4em;
@@ -3837,9 +3837,8 @@ input, select, textarea {
 					right: 0;
 				}
 
-					}
+					}*/
 
-/*
 	#header {
 		color: #ffffff;
 		-moz-align-items: center;
@@ -3950,7 +3949,7 @@ input, select, textarea {
 				}
 
 		}
-*/
+
 /* Nav */
 
 	#nav {
@@ -5036,6 +5035,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
