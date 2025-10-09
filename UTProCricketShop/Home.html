@@ -329,6 +329,7 @@
                 function showImage(index) {
     		        images.forEach((img, i) => {
                     img.classList.toggle('active', i === index);
+					img.classList.toggle('inactive', i !== index);
     		        });
   		        }
 
