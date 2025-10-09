@@ -3526,7 +3526,7 @@ input, select, textarea {
 		}
 
 /* Header */
-
+/*
 	#header {
 		color: #ffffff;
 		-moz-align-items: center;
@@ -3637,7 +3637,7 @@ input, select, textarea {
 				}
 
 		}
-
+*/
 /* Nav */
 
 	#nav {
@@ -4723,6 +4723,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
