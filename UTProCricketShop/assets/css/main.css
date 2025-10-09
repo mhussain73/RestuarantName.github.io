@@ -3333,8 +3333,7 @@ input, select, textarea {
 		z-index: 1;
 		min-height: 100vh;
 	}
-
-/*
+/**/
   	    .carousel {
     	display: inline-flex;
     	align-items: center;
@@ -3372,7 +3371,7 @@ input, select, textarea {
   	    cursor: pointer;
   	    user-select: none;
   	    }
-*/
+/**/
 		#intro .img-container {
   	    display: inline-block;     /* Adjust size of the square */
         aspect-ratio: 1/1;         /* Equal width & height makes it a square */
@@ -5076,6 +5075,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
