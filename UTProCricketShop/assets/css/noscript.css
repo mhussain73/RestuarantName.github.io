@@ -10,8 +10,8 @@
 /* Wrapper */
 
 	#wrapper {
-		background-color: #212931;
-		background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/overlay.png");
+		background-color: #FF0000; /*#212931;*/
+		/*background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/overlay.png");*/
 		background-size: auto,								auto,														100% auto;
 		background-position: center,								center,														top center;
 		background-repeat: repeat,								no-repeat,													no-repeat;
@@ -35,3 +35,4 @@
 			transform: none;
 			opacity: 1;
 		}
+
