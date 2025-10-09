@@ -3334,14 +3334,14 @@ input, select, textarea {
 		min-height: 100vh;
 	}
 /**/
-  	    .carousel {
+  	    #intro .carousel {
     	display: inline-flex;
     	align-items: center;
    	    gap: 10px;
    	    margin-bottom: 20px;
   	    }
 
-  	    .carousel .img-container {
+  	    #intro .carousel .img-container {
     	width: fit-content;        
    	    aspect-ratio: 1 / 1;     
     	position: relative;
@@ -3350,7 +3350,7 @@ input, select, textarea {
    	    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   	    }
 
-  	    .carousel .img-container img {
+  	    #intro .carousel .img-container img {
     	width: 100%;
     	height: 100%;
     	object-fit: cover;
@@ -3360,11 +3360,11 @@ input, select, textarea {
   	    left: 0;
   	    }
 
-  	    .carousel .img-container img.active {
+  	    #intro .carousel .img-container img.active {
   	    display: block;            
   	    }
 
-  	    .carousel .arrow {
+  	    #intro .carousel .arrow {
   	    background: none;
   	    border: none;
    	    font-size: 24px;
@@ -5076,6 +5076,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
