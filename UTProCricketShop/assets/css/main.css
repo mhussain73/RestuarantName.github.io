@@ -4342,7 +4342,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 2px;
+					border-left-width: 0;/*2px;*/
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
@@ -4350,7 +4350,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > article:nth-child(n) {
-					border-left-width: 0;
+					border-left-width: 2px;/*0;*/
 				}
 
 				#main > .posts > article:nth-child(-n + 1) {
@@ -5123,6 +5123,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
