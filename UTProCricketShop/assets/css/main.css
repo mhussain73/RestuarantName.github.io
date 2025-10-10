@@ -4331,12 +4331,14 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .posts > * {
-					width: 100%;
+					/*width: 100%;*/
+					width: 50%;
 				}
 
 				#main > .posts > * {
 					padding: 2rem;
-					width: 100%;
+					/*width: 100%;*/
+					width: 50%;
 				}
 
 				#main > .posts > article:nth-child(2n - 1) {
@@ -5121,6 +5123,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
