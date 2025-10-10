@@ -325,7 +325,7 @@
   		        const images = document.querySelectorAll('#intro .carousel .img-container img');
   		        const leftArrow = document.querySelector('#intro .carousel .img-container .arrow.left');
   		        const rightArrow = document.querySelector('#intro .carousel .img-container .arrow.right');
-                let current = 1;
+                let current = 0;
 
                 function showImage(index) {
     		        images.forEach((img, i) => {
@@ -335,12 +335,20 @@
   		        }
 
                 leftArrow.addEventListener('click', () => {
-                    current = (current - 1 + images.length) % images.length;
+                    //current = (current - 1 + images.length) % images.length;
+					current = current - 1;
+					if (current < 0) {
+						current = images.length;
+					}
                     showImage(current);
                 });
 
  		        rightArrow.addEventListener('click', () => {
-                    current = (current + 1) % images.length;
+                    //current = (current + 1) % images.length;
+					current = current + 1;
+					if (current > (images.length - 1)) {
+						current = 0;
+					}
                     showImage(current);
 				});
 				
@@ -360,11 +368,19 @@
   				    if (Math.abs(diffX) > 50) {
     				    if (diffX > 0) {
                             // Swipe right → show previous image
-      						current = (current + 1) % images.length;
+      						//current = (current + 1) % images.length;
+							current = current - 1;
+							if (current < 0) {
+								current = images.length;
+							}
 						}
 						else {
       					    // Swipe left → show next image
-     				        current = (current - 1 + images.length) % images.length;
+     				        //current = (current - 1 + images.length) % images.length;
+							current = current + 1;
+							if (current > (images.length - 1)) {
+								current = 0;
+							}
 						}
     				showImage(current);
 					}
