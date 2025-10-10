@@ -339,9 +339,35 @@
                 });
 
  		        rightArrow.addEventListener('click', () => {
-                current = (current + 1) % images.length;
-                showImage(current);
-                });
+                    current = (current + 1) % images.length;
+                    showImage(current);
+				});
+				
+				let startX = 0; // To store where the swipe starts
+
+				// Detect when user touches the screen
+				document.querySelector('#intro .carousel').addEventListener('touchstart', (e) => {
+  				    startX = e.touches[0].clientX;
+				});
+				
+				// Detect when user lifts their finger
+				document.querySelector('#intro .carousel').addEventListener('touchend', (e) => {
+  				    const endX = e.changedTouches[0].clientX;
+  				    const diffX = endX - startX;
+
+  				// Minimum swipe distance to trigger
+  				    if (Math.abs(diffX) > 50) {
+    				    if (diffX > 0) {
+                            // Swipe right → show previous image
+      						current = (current - 1 + images.length) % images.length;
+						}
+						else {
+      					    // Swipe left → show next image
+     				        current = (current + 1) % images.length;
+						}
+    				showImage(current);
+					}
+				});
 		    </script>
 	</body>
 
