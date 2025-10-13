@@ -436,6 +436,63 @@
       				    overlay.classList.remove('show');
     				}
   			    });
+
+				//New Code
+				//=============================
+
+				// update overlay image source to match current
+                function updateOverlayImage() {
+                    if (!overlay || !expandedImg) return;
+                        expandedImg.src = images[current].src;
+                        expandedImg.alt = images[current].alt || `Image ${current + 1}`;
+                    }
+
+				// Click image to expand into overlay
+                images.forEach((img, idx) => {
+                    img.addEventListener('click', () => {
+                        current = idx;
+                        showImage(current);
+                        if (!overlay || !expandedImg) return;
+                        updateOverlayImage();
+                        overlay.classList.add('show');
+                        // optional: prevent page scroll while overlay open
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+
+                // Close overlay on background click
+                if (overlay) {
+                    overlay.addEventListener('click', (e) => {
+                        if (e.target === overlay) {
+                            overlay.classList.remove('show');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                }
+
+				// Swipe support inside overlay (so you can swipe while enlarged)
+                if (overlay) {
+    			    let overlayStartX = null;
+    			    overlay.addEventListener('touchstart', (e) => {
+       			        // only start swipe if overlay is shown
+       			        if (!overlay.classList.contains('show')) return;
+       			        overlayStartX = e.touches[0].clientX;
+     			    }, { passive: true });
+
+     			    overlay.addEventListener('touchend', (e) => {
+       			        if (overlayStartX === null) return;
+       			        const overlayendX = e.changedTouches[0].clientX;
+       			        const overlaydx = overlayendX - overlayStartX;
+       			        const threshold = 40;
+       			        if (Math.abs(overlaydx) > threshold) {
+         			        if (overlaydx > 0) current = (current - 1 + images.length) % images.length;
+         			        else current = (current + 1) % images.length;
+         			        updateOverlayImage();
+         			        showImage(current);
+       			        }
+       			        overlayStartX = null;
+     			    }, { passive: true });
+   			    }
 		    </script>
 	</body>
 
