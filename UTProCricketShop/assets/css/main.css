@@ -4372,11 +4372,12 @@ input, select, textarea {
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 2px;
+					border-top-width: 0;/*2px;*/
 				}
 
 				#main > .posts > article:nth-child(n) {
 					border-left-width: 2px;/*0;*/
+					border-top-width: 2px;/*0;*/
 				}
 
 				#main > .posts > article:nth-child(-n + 1) {
@@ -4622,13 +4623,14 @@ input, select, textarea {
 */
 
 		#footer table tbody tr {
-    	    border-color: #e2e2e2;
+    	    border-color: transparent;/*#e2e2e2;*/
     		background-color: transparent; /* Make rows fully see-through */
     		height: auto; /* Allow row height to shrink */
 		}
 
 		#footer table tbody tr:nth-child(2n + 1) {
   		    background-color: transparent; /* Remove alternating background */
+			border-color: transparent;/*addition*/
 		}
 
 		#footer table th {
@@ -4646,7 +4648,7 @@ input, select, textarea {
 		}
 
 		#footer table.alt tbody tr td {
-   		    border-color: #e2e2e2;
+   		    border-color: transparent;/*#e2e2e2;*/
    		    padding: 4px 8px; /* Reduce padding for tighter rows */
    		    background-color: transparent; /* Ensure no cell background */
 		}
@@ -5180,6 +5182,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
