@@ -419,6 +419,21 @@
     				showImage(current);
 					}
 				});
+
+				// Expand image on click
+				images.forEach((img) => {
+    				img.addEventListener('click', () => {
+      				    expandedImg.src = img.src;
+      				    overlay.classList.add('show');
+    				});
+  				});
+
+				// Close expanded image when clicking overlay background
+				overlay.addEventListener('click', (e) => {
+    				if (e.target === overlay) {
+      				    overlay.classList.remove('show');
+    				}
+  			    });
 		    </script>
 	</body>
 
