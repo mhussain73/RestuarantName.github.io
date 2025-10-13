@@ -4595,7 +4595,7 @@ input, select, textarea {
 		#footer header.major .date:before, #footer header.major .date:after {
 			border-top-color: #e2e2e2;
 		}
-
+/*
 		#footer table tbody tr {
 			border-color: #e2e2e2;
 		}
@@ -4618,6 +4618,37 @@ input, select, textarea {
 
 		#footer table.alt tbody tr td {
 			border-color: #e2e2e2;
+		}
+*/
+
+		#footer table tbody tr {
+    	    border-color: #e2e2e2;
+    		background-color: transparent; /* Make rows fully see-through */
+    		height: auto; /* Allow row height to shrink */
+		}
+
+		#footer table tbody tr:nth-child(2n + 1) {
+  		    background-color: transparent; /* Remove alternating background */
+		}
+
+		#footer table th {
+  		    color: #717981;
+ 		    background-color: transparent; /* Ensure header is see-through */
+  		    padding: 4px 8px; /* Reduce padding for tighter rows */
+		}
+
+		#footer table thead {
+  		    border-bottom-color: #e2e2e2;
+		}
+
+		#footer table tfoot {
+    		border-top-color: #e2e2e2;
+		}
+
+		#footer table.alt tbody tr td {
+   		    border-color: #e2e2e2;
+   		    padding: 4px 8px; /* Reduce padding for tighter rows */
+   		    background-color: transparent; /* Ensure no cell background */
 		}
 
 		#footer .pagination a, #footer .pagination span {
@@ -5149,6 +5180,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
