@@ -4636,7 +4636,7 @@ input, select, textarea {
 		#footer table th {
   		    color: #717981;
  		    background-color: transparent; /* Ensure header is see-through */
-  		    padding: 4px 8px; /* Reduce padding for tighter rows */
+  		    padding: 0 6px; /* Reduce padding for tighter rows */
 		}
 
 		#footer table thead {
@@ -4649,7 +4649,7 @@ input, select, textarea {
 
 		#footer table.alt tbody tr td {
    		    border-color: transparent;/*#e2e2e2;*/
-   		    padding: 2px 6px; /* Reduce padding for tighter rows */
+   		    padding: 0 6px; /* Reduce padding for tighter rows */
    		    background-color: transparent; /* Ensure no cell background */
 		}
 
@@ -5182,6 +5182,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
