@@ -44,15 +44,15 @@
       			                <img src="images/bg.jpg" alt="Image 2" class="inactive">
       			                <img src="images/pic123.jpg" alt="Image 3" class="inactive">
 								<img src="images/NewBG.jpg" alt="Image 4" class="inactive">
-                                <button class="arrow left">&#10094;</button>
-								<button class="arrow right">&#10095;</button>
+                                <!--<button class="arrow left">&#10094;</button>
+								<button class="arrow right">&#10095;</button>-->
     			            </div>
 							<!--<button class="arrow right">&#10095;</button>-->
   			            </div>
 						<!-- Overlay for Expanded View -->
-  			            <div class="overlay">
+  			            <!--<div class="overlay">
     			            <img id="expanded-img" src="" alt="Expanded view">
-  			            </div>
+  			            </div>-->
 
 			            <h5>UT<br />PRO CRICKET SHOP</h5>
 						<p>Get The Finest Gear At Unbeatable Prices</p>
@@ -110,7 +110,14 @@
 								</header>
 								<!--<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>-->
 							</article>
-
+						
+						    <!-- Start -->
+							<!-- Overlay for Expanded View -->
+  			            	<div class="overlay">
+    			            	<img id="expanded-img" src="" alt="Expanded view">
+							</div>
+						    <!-- End -->
+						
 						<!-- Posts -->
 							<section class="posts">
 								<article>
@@ -118,7 +125,21 @@
 										<!--<span class="date">April 24, 2017</span>-->
 										<h2>Item Section 1</h2>
 									</header>
-									<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>
+									<!-- Start -->
+  			            			<div class="carousel">
+										<!--<button class="arrow left">&#10094;</button>-->
+    			            			<div class="img-container">
+    			               			<img src="images/CricketShopLogo.jpg" alt="Image 1" class="active">
+      			                			<img src="images/bg.jpg" alt="Image 2" class="inactive">
+      			                			<img src="images/pic123.jpg" alt="Image 3" class="inactive">
+											<img src="images/NewBG.jpg" alt="Image 4" class="inactive">
+                                			<button class="arrow left">&#10094;</button>
+											<button class="arrow right">&#10095;</button>
+    			            			</div>
+										<!--<button class="arrow right">&#10095;</button>-->
+  			            			</div>
+									<!-- End -->
+									<!--<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>-->
 									<h4 style="text-align: left;">Item Name</h4>
 									<p>Description of Item<br />R 99,99</p>
 									<h4 style="text-align: left;">Item Name</h4>
@@ -359,10 +380,16 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		    <script>
-  		        const images = document.querySelectorAll('#intro .carousel .img-container img');
-  		        const leftArrow = document.querySelector('#intro .carousel .img-container .arrow.left');
-  		        const rightArrow = document.querySelector('#intro .carousel .img-container .arrow.right');
-				const overlay = document.querySelector('#intro .overlay');
+  		        //const images = document.querySelectorAll('#intro .carousel .img-container img');
+  		        //const leftArrow = document.querySelector('#intro .carousel .img-container .arrow.left');
+  		        //const rightArrow = document.querySelector('#intro .carousel .img-container .arrow.right');
+				//const overlay = document.querySelector('#intro .overlay');
+				//Start
+                const images = document.querySelectorAll('#main .posts .carousel .img-container img');
+  		        const leftArrow = document.querySelector('#main .posts .carousel .img-container .arrow.left');
+  		        const rightArrow = document.querySelector('#main .posts .carousel .img-container .arrow.right');
+				const overlay = document.querySelector('#main .overlay');
+				// End
                 const expandedImg = document.getElementById('expanded-img');
                 let current = 0;
 
@@ -394,12 +421,14 @@
 				let startX = 0; // To store where the swipe starts
 
 				// Detect when user touches the screen
-				document.querySelector('#intro .carousel').addEventListener('touchstart', (e) => {
+				//document.querySelector('#intro .carousel').addEventListener('touchstart', (e) => {
+				document.querySelector('#main .posts .carousel').addEventListener('touchstart', (e) => {
   				    startX = e.touches[0].clientX;
 				});
 				
 				// Detect when user lifts their finger
-				document.querySelector('#intro .carousel').addEventListener('touchend', (e) => {
+				//document.querySelector('#intro .carousel').addEventListener('touchend', (e) => {
+				document.querySelector('#main .posts .carousel').addEventListener('touchend', (e) => {
   				    const endX = e.changedTouches[0].clientX;
   				    const diffX = endX - startX;
 
