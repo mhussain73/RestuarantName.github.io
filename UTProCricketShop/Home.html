@@ -408,16 +408,8 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		    <script>
-  		        //const images = document.querySelectorAll('#intro .carousel .img-container img');
-  		        //const leftArrow = document.querySelector('#intro .carousel .img-container .arrow.left');
-  		        //const rightArrow = document.querySelector('#intro .carousel .img-container .arrow.right');
-				//const overlay = document.querySelector('#intro .overlay');
-				//Start
                 const images = document.querySelectorAll('#main .posts .carousel .img-container img');
-  		        //const leftArrow = document.querySelector('#main .posts .carousel .img-container .arrow.left');
-  		        //const rightArrow = document.querySelector('#main .posts .carousel .img-container .arrow.right');
-				const overlay = document.querySelector('#main .overlay');
-				// End
+  		        const overlay = document.querySelector('#main .overlay');
                 const expandedImg = document.getElementById('expanded-img');
                 let current = 0;
 
@@ -426,45 +418,23 @@
                     img.classList.toggle('active', i === index);
 					img.classList.toggle('inactive', i !== index);
     		        });
-  		        }
-
-                /*leftArrow.addEventListener('click', () => {
-                    //current = (current - 1 + images.length) % images.length;
-					current = current - 1;
-					if (current < 0) {
-						current = images.length - 1;
-					}
-                    showImage(current);
-                });*/
-
- 		        /*rightArrow.addEventListener('click', () => {
-                    //current = (current + 1) % images.length;
-					current = current + 1;
-					if (current > (images.length - 1)) {
-						current = 0;
-					}
-                    showImage(current);
-				});*/
-				
+				}
 				let startX = 0; // To store where the swipe starts
-
+				
 				// Detect when user touches the screen
-				//document.querySelector('#intro .carousel').addEventListener('touchstart', (e) => {
 				document.querySelector('#main .posts .carousel').addEventListener('touchstart', (e) => {
   				    startX = e.touches[0].clientX;
 				});
 				
 				// Detect when user lifts their finger
-				//document.querySelector('#intro .carousel').addEventListener('touchend', (e) => {
 				document.querySelector('#main .posts .carousel').addEventListener('touchend', (e) => {
   				    const endX = e.changedTouches[0].clientX;
   				    const diffX = endX - startX;
-
+					
   				// Minimum swipe distance to trigger
   				    if (Math.abs(diffX) > 50) {
     				    if (diffX > 0) {
                             // Swipe right → show previous image
-      						//current = (current + 1) % images.length;
 							current = current - 1;
 							if (current < 0) {
 								current = images.length - 1;
@@ -472,8 +442,7 @@
 						}
 						else {
       					    // Swipe left → show next image
-     				        //current = (current - 1 + images.length) % images.length;
-							current = current + 1;
+     				        current = current + 1;
 							if (current > (images.length - 1)) {
 								current = 0;
 							}
@@ -501,38 +470,12 @@
     				}
   			    });
 
-				//New Code
-				//=============================
-
 				// update overlay image source to match current
                 function updateOverlayImage() {
                     if (!overlay || !expandedImg) return;
                         expandedImg.src = images[current].src;
                         expandedImg.alt = images[current].alt || `Image ${current + 1}`;
                     }
-
-				// Click image to expand into overlay
-                /*images.forEach((img, idx) => {
-                    img.addEventListener('click', () => {
-                        current = idx;
-                        showImage(current);
-                        if (!overlay || !expandedImg) return;
-                        updateOverlayImage();
-                        overlay.classList.add('show');
-                        // optional: prevent page scroll while overlay open
-                        document.body.style.overflow = 'hidden';
-                    });
-                });
-
-                // Close overlay on background click
-                if (overlay) {
-                    overlay.addEventListener('click', (e) => {
-                        if (e.target === overlay) {
-                            overlay.classList.remove('show');
-                            document.body.style.overflow = '';
-                        }
-                    });
-                }*/
 
 				// Swipe support inside overlay (so you can swipe while enlarged)
                 if (overlay) {
@@ -552,7 +495,6 @@
          			        if (overlaydx > 0) current = (current - 1 + images.length) % images.length;
          			        else current = (current + 1) % images.length;
          			        updateOverlayImage();
-         			        //showImage(current);
        			        }
        			        overlayStartX = null;
      			    }, { passive: true });
