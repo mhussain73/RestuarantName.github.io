@@ -9,7 +9,7 @@ function showImage(index) {
 		img.classList.toggle('inactive', i !== index);
     });
 }
-/*
+
 //Start
 // update overlay image source to match current
 function updateOverlayImage(j) {
@@ -20,7 +20,7 @@ function updateOverlayImage(j) {
     });
 }
 //End
-*/
+
 let startX = 0; // To store where the swipe starts
 				
 // Detect when user touches the screen
@@ -72,14 +72,14 @@ overlay.addEventListener('click', (e) => {
 		current = 0;//Add On
     }
 });
-
+/*
 // update overlay image source to match current
 function updateOverlayImage() {
     if (!overlay || !expandedImg) return;
         expandedImg.src = images[current].src;
         expandedImg.alt = images[current].alt || `Image ${current + 1}`;
 }
-
+*/
 // Swipe support inside overlay (so you can swipe while enlarged)
 if (overlay) {
     let overlayStartX = null;
@@ -109,7 +109,7 @@ if (overlay) {
 				    current = 0;
 			    }
 			}//current = (current + 1) % images.length;
-         	updateOverlayImage();
+         	updateOverlayImage(current);
        	}
        	overlayStartX = null;
     }, { passive: true });
