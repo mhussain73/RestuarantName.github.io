@@ -109,7 +109,7 @@ if (overlay) {
 				    current = 0;
 			    }
 			}//current = (current + 1) % images.length;
-         	updateOverlayImage();
+         	updateOverlayImage(current);
        	}
        	overlayStartX = null;
     }, { passive: true });
