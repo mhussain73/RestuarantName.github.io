@@ -4247,6 +4247,7 @@ input, select, textarea {
         border-radius: 12px;       /* Optional: rounded corners */
         box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: shadow */
 		text-align: left;          /*img label to the left*/
+		position: relative;        /*img label to the front*/
   	    }
 
   	    #main .posts .carousel .img-container img {
@@ -4261,6 +4262,7 @@ input, select, textarea {
 	        height: 100%;
 	        object-fit: cover;       /* Makes image cover the square perfectly */
 	        /*display: block;*/
+			position: relative;
   	    }
 
   	    #main .posts .carousel .img-container img.active {
@@ -4276,7 +4278,8 @@ input, select, textarea {
         font-size: 0.75rem; /* makes it small */
         color: #666; /* soft grey color */
         margin-top: 4px; /* small space below image */
-        }
+		position: absolute;  /*bring forward*/
+		}
 
 /*
   	    #main .posts .carousel .arrow {
@@ -5321,6 +5324,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
