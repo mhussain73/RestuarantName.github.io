@@ -1,6 +1,6 @@
 const images = document.querySelectorAll('#main .posts article:nth-of-type(1) .carousel .img-container img');
-const overlay = document.querySelector('#main .overlay');
-const expandedImg = document.getElementById('expanded-img');
+const overlay = document.querySelector('#main .overlay:nth-of-type(1)');
+const expandedImg = document.getElementById('expanded-img1');
 let current = 0;
                 
 function showImage(index) {
