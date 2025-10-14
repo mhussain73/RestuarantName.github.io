@@ -487,6 +487,8 @@
     				img.addEventListener('click', () => {
       				    expandedImg.src = img.src;
       				    overlay.classList.add('show');
+						// optional: prevent page scroll while overlay open
+                        document.body.style.overflow = 'hidden';
     				});
   				});
 
@@ -494,6 +496,7 @@
 				overlay.addEventListener('click', (e) => {
     				if (e.target === overlay) {
       				    overlay.classList.remove('show');
+						document.body.style.overflow = '';
     				}
   			    });
 
@@ -508,7 +511,7 @@
                     }
 
 				// Click image to expand into overlay
-                images.forEach((img, idx) => {
+                /*images.forEach((img, idx) => {
                     img.addEventListener('click', () => {
                         current = idx;
                         showImage(current);
@@ -528,7 +531,7 @@
                             document.body.style.overflow = '';
                         }
                     });
-                }
+                }*/
 
 				// Swipe support inside overlay (so you can swipe while enlarged)
                 if (overlay) {
@@ -548,7 +551,7 @@
          			        if (overlaydx > 0) current = (current - 1 + images.length) % images.length;
          			        else current = (current + 1) % images.length;
          			        updateOverlayImage();
-         			        showImage(current);
+         			        //showImage(current);
        			        }
        			        overlayStartX = null;
      			    }, { passive: true });
