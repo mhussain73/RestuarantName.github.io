@@ -4275,8 +4275,8 @@ input, select, textarea {
 
   	    #main .posts .carousel .img-container .img-label {
         display: block;
-        font-size: 0.75rem; /* makes it small */
-        color: #666; /* soft grey color */
+        font-size: 4rem; /* makes it small */
+        color: #000000; /* soft grey color */
         margin-top: 4px; /* small space below image */
 		position: absolute;  /*bring forward*/
 		}
@@ -5324,6 +5324,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
