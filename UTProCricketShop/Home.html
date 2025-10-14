@@ -133,8 +133,8 @@
       			                			<img src="images/bg.jpg" alt="Image 2" class="inactive">
       			                			<img src="images/pic123.jpg" alt="Image 3" class="inactive">
 											<img src="images/NewBG.jpg" alt="Image 4" class="inactive">
-                                			<button class="arrow left">&#10094;</button>
-											<button class="arrow right">&#10095;</button>
+                                			<!--<button class="arrow left">&#10094;</button>
+											<button class="arrow right">&#10095;</button>-->
     			            			</div>
 										<!--<button class="arrow right">&#10095;</button>-->
   			            			</div>
@@ -152,7 +152,21 @@
 										<!--<span class="date">April 24, 2017</span>-->
 										<h2>Item Section 2</h2>
 									</header>
-									<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>
+									<!-- Start -->
+  			            			<div class="carousel">
+										<!--<button class="arrow left">&#10094;</button>-->
+    			            			<div class="img-container">
+    			               			<img src="images/CricketShopLogo.jpg" alt="Image 1" class="active">
+      			                			<img src="images/bg.jpg" alt="Image 2" class="inactive">
+      			                			<img src="images/pic123.jpg" alt="Image 3" class="inactive">
+											<img src="images/NewBG.jpg" alt="Image 4" class="inactive">
+                                			<!--<button class="arrow left">&#10094;</button>
+											<button class="arrow right">&#10095;</button>-->
+    			            			</div>
+										<!--<button class="arrow right">&#10095;</button>-->
+  			            			</div>
+									<!-- End -->
+									<!--<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>-->
 									<h4 style="text-align: left;">Item Name</h4>
 									<p>Description of Item<br />R 99,99</p>
 									<h4 style="text-align: left;">Item Name</h4>
@@ -165,7 +179,21 @@
 										<!--<span class="date">April 24, 2017</span>-->
 										<h2>Item Section 3</h2>
 									</header>
-									<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>
+									<!-- Start -->
+  			            			<div class="carousel">
+										<!--<button class="arrow left">&#10094;</button>-->
+    			            			<div class="img-container">
+    			               			<img src="images/CricketShopLogo.jpg" alt="Image 1" class="active">
+      			                			<img src="images/bg.jpg" alt="Image 2" class="inactive">
+      			                			<img src="images/pic123.jpg" alt="Image 3" class="inactive">
+											<img src="images/NewBG.jpg" alt="Image 4" class="inactive">
+                                			<!--<button class="arrow left">&#10094;</button>
+											<button class="arrow right">&#10095;</button>-->
+    			            			</div>
+										<!--<button class="arrow right">&#10095;</button>-->
+  			            			</div>
+									<!-- End -->
+									<!--<a href="images/overlay.png" class="image fit"><img src="images/overlay.png" alt="" /></a>-->
 									<h4 style="text-align: left;">Item Name</h4>
 									<p>Description of Item<br />R 99,99</p>
 									<h4 style="text-align: left;">Item Name</h4>
@@ -386,8 +414,8 @@
 				//const overlay = document.querySelector('#intro .overlay');
 				//Start
                 const images = document.querySelectorAll('#main .posts .carousel .img-container img');
-  		        const leftArrow = document.querySelector('#main .posts .carousel .img-container .arrow.left');
-  		        const rightArrow = document.querySelector('#main .posts .carousel .img-container .arrow.right');
+  		        //const leftArrow = document.querySelector('#main .posts .carousel .img-container .arrow.left');
+  		        //const rightArrow = document.querySelector('#main .posts .carousel .img-container .arrow.right');
 				const overlay = document.querySelector('#main .overlay');
 				// End
                 const expandedImg = document.getElementById('expanded-img');
@@ -400,23 +428,23 @@
     		        });
   		        }
 
-                leftArrow.addEventListener('click', () => {
+                /*leftArrow.addEventListener('click', () => {
                     //current = (current - 1 + images.length) % images.length;
 					current = current - 1;
 					if (current < 0) {
 						current = images.length - 1;
 					}
                     showImage(current);
-                });
+                });*/
 
- 		        rightArrow.addEventListener('click', () => {
+ 		        /*rightArrow.addEventListener('click', () => {
                     //current = (current + 1) % images.length;
 					current = current + 1;
 					if (current > (images.length - 1)) {
 						current = 0;
 					}
                     showImage(current);
-				});
+				});*/
 				
 				let startX = 0; // To store where the swipe starts
 
