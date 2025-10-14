@@ -9,6 +9,18 @@ function showImage(index) {
 		img.classList.toggle('inactive', i !== index);
     });
 }
+/*
+//Start
+// update overlay image source to match current
+function updateOverlayImage(j) {
+    images.forEach((img, i) => {
+		if (j === i) {
+			expandedImg.src = img.src;
+		}
+    });
+}
+//End
+*/
 let startX = 0; // To store where the swipe starts
 				
 // Detect when user touches the screen
@@ -57,6 +69,7 @@ overlay.addEventListener('click', (e) => {
       	overlay.classList.remove('show');
 		document.body.style.overflow = '';
 		expandedImg.src = '';
+		current = 0;//Add On
     }
 });
 
