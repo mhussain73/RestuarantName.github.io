@@ -4507,12 +4507,14 @@ input, select, textarea {
 			@media screen and (max-width: 980px) {
 
 				#main > .posts > * {
-					width: 50%;
+					/*width: 50%;*/
+					width: 100%;
 				}
 
 				#main > .posts > * {
 					padding: 2.5rem;
-					width: 50%;
+					/*width: 50%;*/
+					width: 100%;
 				}
 
 			}
@@ -4520,14 +4522,16 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .posts > * {
-					/*width: 100%;*/
-					width: 50%;
+					/*No1 width: 100%;*/
+					/*No2 width: 50%;*/
+					width: 100%;
 				}
 
 				#main > .posts > * {
 					padding: 2rem;
-					/*width: 100%;*/
-					width: 50%;
+					/*No1 width: 100%;*/
+					/*No2 width: 50%;*/
+					width: 100%;
 				}
 
 				#main > .posts > article:nth-child(2n - 1) {
@@ -5345,6 +5349,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
