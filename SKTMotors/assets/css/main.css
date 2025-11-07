@@ -4405,7 +4405,7 @@ input, select, textarea {
 			#main > .post.featured .view-btn {
   			    display: inline-block;
   			    padding: 12px 24px;
- 			    background-color: #8B0000; /* dark red */
+ 			    background-color: #570505; /* dark red */
  			    color: white;
   			    text-decoration: none;
    			    font-size: 16px;
@@ -5345,6 +5345,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
