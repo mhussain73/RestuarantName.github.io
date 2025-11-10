@@ -1,12 +1,10 @@
-const images = document.querySelectorAll('#main .posts.active article:nth-of-type(1) .carousel .img-container img');
-const overlay = document.querySelector('#main .overlay:nth-of-type(1)');
-const expandedImg = document.getElementById('expanded-img1');
+const p_pages = document.querySelectorAll('#main .posts');
 let current = 0;
                 
-function showImage(index) {
-    images.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-		img.classList.toggle('inactive', i !== index);
+function showPage(index) {
+    p_pages.forEach((pg, i) => {
+        pg.classList.toggle('active', i === index);
+		pg.classList.toggle('inactive', i !== index);
     });
 }
 
