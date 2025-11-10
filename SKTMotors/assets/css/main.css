@@ -4464,6 +4464,16 @@ input, select, textarea {
 			padding: 0;
 		}
 
+/*Start*/
+        #main > .posts.inactive {
+		    display: none;
+		}
+
+        #main > .posts.active {
+		    display: block;
+		}
+/*End*/
+
 			#main > .posts > * {
 				-moz-flex-shrink: 1;
 				-webkit-flex-shrink: 1;
@@ -5349,6 +5359,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
