@@ -1,4 +1,5 @@
-const images = document.querySelectorAll('#main .posts.active article:nth-of-type(1) .carousel .img-container img');
+const activeSection = document.querySelector('#main .posts.active');
+const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
 const overlay = document.querySelector('#main .overlay:nth-of-type(1)');
 const expandedImg = document.getElementById('expanded-img1');
 let current = 0;
@@ -24,12 +25,12 @@ function updateOverlayImage(j) {
 let startX = 0; // To store where the swipe starts
 				
 // Detect when user touches the screen
-document.querySelector('#main .posts.active article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
+activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
   	startX = e.touches[0].clientX;
 });
 				
 // Detect when user lifts their finger
-document.querySelector('#main .posts.active article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
+activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
   	const endX = e.changedTouches[0].clientX;
   	const diffX = endX - startX;
 					
