@@ -700,7 +700,7 @@
 			<script type="module" src="assets/js/article/article8.js"></script>
 			<script type="module" src="assets/js/article/article9.js"></script>
 			<script type="module" src="assets/js/article/article10.js"></script>-->
- 
+ <!--
 		    <script type="module">
 				const activeSection = document.querySelector('#main .posts.active');
                 const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
@@ -1081,7 +1081,7 @@
 					}
 				});
 			</script>		
-		
+-->
 		    <!--<script>
                 const images = document.querySelectorAll('#main .posts .carousel .img-container img');
   		        const overlay = document.querySelector('#main .overlay');
@@ -1175,6 +1175,160 @@
      			    }, { passive: true });
    			    }
 		    </script>-->
+
+<script>
+
+// ---------------------------------------------
+// SECTION NAVIGATION
+// ---------------------------------------------
+
+const p_pages = document.querySelectorAll('#main .posts');
+let currentSection = 0;
+
+function showPage(index) {
+    p_pages.forEach((pg, i) => {
+        pg.classList.toggle('active', i === index);
+        pg.classList.toggle('inactive', i !== index);
+    });
+
+    // Reinitialize article 1 carousel for the new active section
+    initArticle1Carousel();
+}
+
+// NEXT SECTION BUTTON
+document.getElementById('nextSect').addEventListener('click', (e) => {
+    e.preventDefault();
+    currentSection++;
+    if (currentSection >= p_pages.length) currentSection = 0;
+    showPage(currentSection);
+});
+
+// PREV SECTION BUTTON
+document.getElementById('prevSect').addEventListener('click', (e) => {
+    e.preventDefault();
+    currentSection--;
+    if (currentSection < 0) currentSection = p_pages.length - 1;
+    showPage(currentSection);
+});
+
+
+// ---------------------------------------------
+// ARTICLE 1 CAROUSEL LOGIC (DYNAMIC)
+// ---------------------------------------------
+
+function initArticle1Carousel() {
+    const activeSection = document.querySelector('#main .posts.active');
+    if (!activeSection) return;
+
+    const images = activeSection.querySelectorAll(
+        'article:nth-of-type(1) .carousel .img-container img'
+    );
+
+    const carousel = activeSection.querySelector('article:nth-of-type(1) .carousel');
+
+    const overlay = activeSection.querySelector('.overlay:nth-of-type(1)');
+    const expandedImg = document.getElementById('expanded-img1');
+
+    if (!images.length || !carousel || !overlay || !expandedImg) return;
+
+    let currentImg = 0;
+    let startX = 0;
+
+
+    // ---- IMAGE SWITCHER ----
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+            img.classList.toggle('inactive', i !== index);
+        });
+    }
+
+    function updateOverlayImage(index) {
+        expandedImg.src = images[index].src;
+    }
+
+
+    // ---- SWIPE ON CAROUSEL ----
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                currentImg--;
+                if (currentImg < 0) currentImg = images.length - 1;
+            } else {
+                currentImg++;
+                if (currentImg >= images.length) currentImg = 0;
+            }
+
+            showImage(currentImg);
+        }
+    });
+
+
+    // ---- CLICK TO EXPAND ----
+    images.forEach((img, i) => {
+        img.addEventListener('click', () => {
+            currentImg = i;
+            expandedImg.src = img.src;
+            overlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+
+    // ---- CLOSE OVERLAY ----
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+
+
+    // ---- SWIPE INSIDE OVERLAY ----
+    let overlayStartX = null;
+
+    overlay.addEventListener('touchstart', (e) => {
+        if (!overlay.classList.contains('show')) return;
+        overlayStartX = e.touches[0].clientX;
+    });
+
+    overlay.addEventListener('touchend', (e) => {
+        if (overlayStartX === null) return;
+
+        const end = e.changedTouches[0].clientX;
+        const diff = end - overlayStartX;
+
+        if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+                currentImg--;
+                if (currentImg < 0) currentImg = images.length - 1;
+            } else {
+                currentImg++;
+                if (currentImg >= images.length) currentImg = 0;
+            }
+
+            updateOverlayImage(currentImg);
+        }
+
+        overlayStartX = null;
+    });
+}
+
+
+// ---------------------------------------------
+// INITIALIZE FIRST SECTION ON PAGE LOAD
+// ---------------------------------------------
+initArticle1Carousel();
+	
+</script>
+		
 	</body>
 
 </html>
