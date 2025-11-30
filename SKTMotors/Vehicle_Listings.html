@@ -1192,7 +1192,7 @@ function showPage(index) {
     });
 
     // Reinitialize article 1 carousel for the new active section
-    initArticle1Carousel();
+    funcA1();
 }
 
 // NEXT SECTION BUTTON
@@ -1216,8 +1216,8 @@ document.getElementById('prevSect').addEventListener('click', (e) => {
 // ARTICLE 1 CAROUSEL LOGIC (DYNAMIC)
 // ---------------------------------------------
 
-function initArticle1Carousel() {
-    const activeSection = document.querySelector('#main .posts.active');
+function funcA1() {
+    /*const activeSection = document.querySelector('#main .posts.active');
     if (!activeSection) return;
 
     const images = activeSection.querySelectorAll(
@@ -1318,14 +1318,52 @@ function initArticle1Carousel() {
         }
 
         overlayStartX = null;
-    });
+    });*/
+
+                const activeSection = document.querySelector('#main .posts.active');
+                const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
+				let current = 0;
+				function showImage(index) {
+					images.forEach((img, i) => {
+						img.classList.toggle('active', i === index);
+						img.classList.toggle('inactive', i !== index);
+					});
+				}
+				let startX = 0; // To store where the swipe starts
+				
+				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
+					startX = e.touches[0].clientX;
+				});
+				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
+					const endX = e.changedTouches[0].clientX;
+					const diffX = endX - startX;
+					
+					if (Math.abs(diffX) > 50) {
+						if (diffX > 0) {
+							// Swipe right → show previous image
+							current = current - 1;
+							if (current < 0) {
+								current = images.length - 1;
+							}
+						}
+						else {
+							// Swipe left → show next image
+							current = current + 1;
+							if (current > (images.length - 1)) {
+								current = 0;
+							}
+						}
+						showImage(current);
+					}
+				});
+	
 }
 
 
 // ---------------------------------------------
 // INITIALIZE FIRST SECTION ON PAGE LOAD
 // ---------------------------------------------
-initArticle1Carousel();
+funcA1();
 	
 </script>
 		
