@@ -689,499 +689,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!--<script src="assets/js/article/Posts_page.js"></script><!--
-			<script type="module" src="assets/js/article/article1.js"></script>
-			<script type="module" src="assets/js/article/article2.js"></script>
-			<script type="module" src="assets/js/article/article3.js"></script>
-			<script type="module" src="assets/js/article/article4.js"></script>
-			<script type="module" src="assets/js/article/article5.js"></script>
-			<script type="module" src="assets/js/article/article6.js"></script>
-			<script type="module" src="assets/js/article/article7.js"></script>
-			<script type="module" src="assets/js/article/article8.js"></script>
-			<script type="module" src="assets/js/article/article9.js"></script>
-			<script type="module" src="assets/js/article/article10.js"></script>-->
- <!--
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(2) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(2) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(2) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(3) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(3) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(3) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(4) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(4) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(4) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(5) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(5) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(5) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(6) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(6) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(6) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(7) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(7) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(7) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(8) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(8) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(8) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(9) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(9) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(9) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>
-		    <script type="module">
-				const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(10) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				activeSection.querySelector('article:nth-of-type(10) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(10) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
-					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
-			</script>		
--->
-		    <!--<script>
-                const images = document.querySelectorAll('#main .posts .carousel .img-container img');
-  		        const overlay = document.querySelector('#main .overlay');
-                const expandedImg = document.getElementById('expanded-img');
-                let current = 0;
-                /*
-                function showImage(index) {
-    		        images.forEach((img, i) => {
-                    img.classList.toggle('active', i === index);
-					img.classList.toggle('inactive', i !== index);
-    		        });
-				}
-				let startX = 0; // To store where the swipe starts
-				
-				// Detect when user touches the screen
-				document.querySelector('#main .posts .carousel').addEventListener('touchstart', (e) => {
-  				    startX = e.touches[0].clientX;
-				});
-				
-				// Detect when user lifts their finger
-				document.querySelector('#main .posts .carousel').addEventListener('touchend', (e) => {
-  				    const endX = e.changedTouches[0].clientX;
-  				    const diffX = endX - startX;
-					
-  				// Minimum swipe distance to trigger
-  				    if (Math.abs(diffX) > 50) {
-    				    if (diffX > 0) {
-                            // Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-      					    // Swipe left → show next image
-     				        current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-    				showImage(current);
-					}
-				});*/
-
-				// Expand image on click
-				images.forEach((img) => {
-    				img.addEventListener('click', () => {
-      				    expandedImg.src = img.src;
-      				    overlay.classList.add('show');
-						// optional: prevent page scroll while overlay open
-                        document.body.style.overflow = 'hidden';
-    				});
-  				});
-
-				// Close expanded image when clicking overlay background
-				overlay.addEventListener('click', (e) => {
-    				if (e.target === overlay) {
-      				    overlay.classList.remove('show');
-						document.body.style.overflow = '';
-						expandedImg.src = '';
-    				}
-  			    });
-
-				// update overlay image source to match current
-                function updateOverlayImage() {
-                    if (!overlay || !expandedImg) return;
-                        expandedImg.src = images[current].src;
-                        expandedImg.alt = images[current].alt || `Image ${current + 1}`;
-                    }
-
-				// Swipe support inside overlay (so you can swipe while enlarged)
-                if (overlay) {
-    			    let overlayStartX = null;
-    			    overlay.addEventListener('touchstart', (e) => {
-       			        // only start swipe if overlay is shown
-       			        if (!overlay.classList.contains('show')) return;
-       			        overlayStartX = e.touches[0].clientX;
-     			    }, { passive: true });
-
-     			    overlay.addEventListener('touchend', (e) => {
-       			        if (overlayStartX === null) return;
-       			        const overlayendX = e.changedTouches[0].clientX;
-       			        const overlaydx = overlayendX - overlayStartX;
-       			        const threshold = 40;
-       			        if (Math.abs(overlaydx) > threshold) {
-         			        if (overlaydx > 0) current = (current - 1 + images.length) % images.length;
-         			        else current = (current + 1) % images.length;
-         			        updateOverlayImage();
-       			        }
-       			        overlayStartX = null;
-     			    }, { passive: true });
-   			    }
-		    </script>-->
+			<script src="assets/js/article/Posts_page.js"></script>
 
 <script>
-
-// ---------------------------------------------
-// SECTION NAVIGATION
-// ---------------------------------------------
-
+	
 const p_pages = document.querySelectorAll('#main .posts');
 let currentSection = 0;
 
@@ -1191,11 +702,11 @@ function showPage(index) {
         pg.classList.toggle('inactive', i !== index);
     });
 
-    // Reinitialize article 1 carousel for the new active section
+    // Reinitialize article 1 for new section
     funcA1();
 }
 
-// NEXT SECTION BUTTON
+//Next Section
 document.getElementById('nextSect').addEventListener('click', (e) => {
     e.preventDefault();
     currentSection++;
@@ -1203,7 +714,7 @@ document.getElementById('nextSect').addEventListener('click', (e) => {
     showPage(currentSection);
 });
 
-// PREV SECTION BUTTON
+//Previous Section
 document.getElementById('prevSect').addEventListener('click', (e) => {
     e.preventDefault();
     currentSection--;
@@ -1211,158 +722,49 @@ document.getElementById('prevSect').addEventListener('click', (e) => {
     showPage(currentSection);
 });
 
-
-// ---------------------------------------------
-// ARTICLE 1 CAROUSEL LOGIC (DYNAMIC)
-// ---------------------------------------------
-
+//Article 1
 function funcA1() {
-    /*const activeSection = document.querySelector('#main .posts.active');
-    if (!activeSection) return;
 
-    const images = activeSection.querySelectorAll(
-        'article:nth-of-type(1) .carousel .img-container img'
-    );
-
-    const carousel = activeSection.querySelector('article:nth-of-type(1) .carousel');
-
-    const overlay = activeSection.querySelector('.overlay:nth-of-type(1)');
-    const expandedImg = document.getElementById('expanded-img1');
-
-    if (!images.length || !carousel || !overlay || !expandedImg) return;
-
-    let currentImg = 0;
-    let startX = 0;
-
-
-    // ---- IMAGE SWITCHER ----
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-            img.classList.toggle('inactive', i !== index);
-        });
-    }
-
-    function updateOverlayImage(index) {
-        expandedImg.src = images[index].src;
-    }
-
-
-    // ---- SWIPE ON CAROUSEL ----
-    carousel.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
-
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                currentImg--;
-                if (currentImg < 0) currentImg = images.length - 1;
-            } else {
-                currentImg++;
-                if (currentImg >= images.length) currentImg = 0;
-            }
-
-            showImage(currentImg);
-        }
-    });
-
-
-    // ---- CLICK TO EXPAND ----
-    images.forEach((img, i) => {
-        img.addEventListener('click', () => {
-            currentImg = i;
-            expandedImg.src = img.src;
-            overlay.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-
-    // ---- CLOSE OVERLAY ----
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            overlay.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-    });
-
-
-    // ---- SWIPE INSIDE OVERLAY ----
-    let overlayStartX = null;
-
-    overlay.addEventListener('touchstart', (e) => {
-        if (!overlay.classList.contains('show')) return;
-        overlayStartX = e.touches[0].clientX;
-    });
-
-    overlay.addEventListener('touchend', (e) => {
-        if (overlayStartX === null) return;
-
-        const end = e.changedTouches[0].clientX;
-        const diff = end - overlayStartX;
-
-        if (Math.abs(diff) > 40) {
-            if (diff > 0) {
-                currentImg--;
-                if (currentImg < 0) currentImg = images.length - 1;
-            } else {
-                currentImg++;
-                if (currentImg >= images.length) currentImg = 0;
-            }
-
-            updateOverlayImage(currentImg);
-        }
-
-        overlayStartX = null;
-    });*/
-
-                const activeSection = document.querySelector('#main .posts.active');
-                const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
-				let current = 0;
-				function showImage(index) {
-					images.forEach((img, i) => {
-						img.classList.toggle('active', i === index);
-						img.classList.toggle('inactive', i !== index);
-					});
-				}
-				let startX = 0; // To store where the swipe starts
+    const activeSection = document.querySelector('#main .posts.active');
+    const images = activeSection.querySelectorAll('article:nth-of-type(1) .carousel .img-container img');
+	let current = 0;
+	function showImage(index) {
+		images.forEach((img, i) => {
+			img.classList.toggle('active', i === index);
+			img.classList.toggle('inactive', i !== index);
+		});
+	}
+	let startX = 0; // To store where the swipe starts
 				
-				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
-					startX = e.touches[0].clientX;
-				});
-				activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
-					const endX = e.changedTouches[0].clientX;
-					const diffX = endX - startX;
+	activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchstart', (e) => {
+		startX = e.touches[0].clientX;
+	});
+	activeSection.querySelector('article:nth-of-type(1) .carousel').addEventListener('touchend', (e) => {
+		const endX = e.changedTouches[0].clientX;
+		const diffX = endX - startX;
 					
-					if (Math.abs(diffX) > 50) {
-						if (diffX > 0) {
-							// Swipe right → show previous image
-							current = current - 1;
-							if (current < 0) {
-								current = images.length - 1;
-							}
-						}
-						else {
-							// Swipe left → show next image
-							current = current + 1;
-							if (current > (images.length - 1)) {
-								current = 0;
-							}
-						}
-						showImage(current);
-					}
-				});
+		if (Math.abs(diffX) > 50) {
+			if (diffX > 0) {
+			    // Swipe right → show previous image
+				current = current - 1;
+				if (current < 0) {
+					current = images.length - 1;
+				}
+			}
+			else {
+				// Swipe left → show next image
+				current = current + 1;
+				if (current > (images.length - 1)) {
+					current = 0;
+				}
+			}
+			showImage(current);
+		}
+	});
 	
 }
 
-
-// ---------------------------------------------
-// INITIALIZE FIRST SECTION ON PAGE LOAD
-// ---------------------------------------------
+//Activate on initial load
 funcA1();
 	
 </script>
